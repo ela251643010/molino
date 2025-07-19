@@ -1,4 +1,6 @@
 package com.ucb.despachos2.navigation
 
-class Screen {
+sealed class Screen (val route: String){
+    object LoginScreen: Screen ( "login")
+    object HomeScreen: Screen("home")
 }
