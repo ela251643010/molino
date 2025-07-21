@@ -5,9 +5,10 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.ucb.despachos2.presentation.EntregasScreen.EntregaUi
 
 import com.ucb.despachos2.presentation.login.LoginUi
-import com.ucb.despachos2.presentation.login.HomeScreen.HomeScreenUI
+import com.ucb.despachos2.presentation.HomeScreen.HomeScreenUI
 
 @Composable
 fun AppNavigation() {
@@ -23,6 +24,11 @@ fun AppNavigation() {
 
         composable(Screen.HomeScreen.route) {
             HomeScreenUI()
+        }
+        composable(Screen.EntregasScreen.route)
+        {
+            backStackEntry ->
+            EntregaUi(backStackEntry)
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.ucb.despachos2.di
 
 import com.ucb.despachos2.data.remote.AuthApi
+import com.ucb.despachos2.data.remote.EntregaApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -43,4 +44,9 @@ object NetworkModule {
     @Singleton
     fun provideAuthApi(retrofit: Retrofit): AuthApi=
         retrofit.create(AuthApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideEntregaApi(retrofit: Retrofit):EntregaApi =
+        retrofit.create(EntregaApi::class.java)
 }

@@ -13,6 +13,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.ucb.despachos2.navigation.Screen
 import com.ucb.despachos2.presentation.login.LoginViewModel
 
 @Composable
@@ -63,8 +64,8 @@ fun LoginUi(
         loginState?.let { result ->
             result.onSuccess { token ->
                 Toast.makeText(context, "Login exitoso", Toast.LENGTH_SHORT).show()
-                navController.navigate("home") {
-                    popUpTo("login") { inclusive = true }
+                navController.navigate("entrega") {
+                    popUpTo("entrega") { inclusive = true }
                 }
             }
             result.onFailure {

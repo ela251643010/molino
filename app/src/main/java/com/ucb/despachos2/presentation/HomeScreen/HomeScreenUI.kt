@@ -1,4 +1,4 @@
-package com.ucb.despachos2.presentation.login.HomeScreen
+package com.ucb.despachos2.presentation.HomeScreen
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
