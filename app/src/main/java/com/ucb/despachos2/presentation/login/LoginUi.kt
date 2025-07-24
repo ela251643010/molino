@@ -64,8 +64,8 @@ fun LoginUi(
         loginState?.let { result ->
             result.onSuccess { token ->
                 Toast.makeText(context, "Login exitoso", Toast.LENGTH_SHORT).show()
-                navController.navigate("entrega") {
-                    popUpTo("entrega") { inclusive = true }
+                navController.navigate("proTra") {
+                    popUpTo("proTra") { inclusive = true }
                 }
             }
             result.onFailure {

@@ -9,6 +9,7 @@ import com.ucb.despachos2.presentation.EntregasScreen.EntregaUi
 
 import com.ucb.despachos2.presentation.login.LoginUi
 import com.ucb.despachos2.presentation.HomeScreen.HomeScreenUI
+import com.ucb.despachos2.presentation.ProduPorTraScreen.ProduPorTraUi
 
 @Composable
 fun AppNavigation() {
@@ -29,6 +30,10 @@ fun AppNavigation() {
         {
             backStackEntry ->
             EntregaUi(backStackEntry)
+        }
+        composable(Screen.ProduccionPorTransporteScren.route)
+        {
+            ProduPorTraUi()
         }
     }
 }

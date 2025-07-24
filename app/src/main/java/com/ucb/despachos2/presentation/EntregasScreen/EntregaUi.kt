@@ -6,10 +6,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.livedata.observeAsState
-import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.compose.runtime.getValue
-import androidx.hilt.navigation.HiltViewModelFactory
 import androidx.navigation.NavBackStackEntry
 
 @Composable
@@ -19,7 +17,10 @@ fun EntregaUi(backStackEntry: NavBackStackEntry) {
     val entregasResult by viewModel.entregas.observeAsState()
 
     LaunchedEffect(Unit) {
-        viewModel.cargarEntregas("2025-06-05T20:01:05.447Z")
+        /*
+        val today = obtenerFechaISOHoy()
+        viewModel.cargarEntregas(today)*/
+        viewModel.cargarEntregas("2025-06-10T20:01:05.447Z")
     }
 
     when {

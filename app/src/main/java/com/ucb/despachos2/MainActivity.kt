@@ -20,12 +20,10 @@ import kotlin.math.log
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //throw RuntimeException("Esto es una prueba")
         enableEdgeToEdge()
         setContent {
 
             Despachos2Theme {
-                //Log.d("llegue aca?")
                 AppNavigation()
             }
         }
